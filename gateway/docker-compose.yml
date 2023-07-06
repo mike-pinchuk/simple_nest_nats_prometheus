@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  overlay:
+    image: "nats:latest"
+    command: "-m 8222 --jetstream"
+    # volumes:
+    #   - "transport:/tmp/nats/jetstream"
+    ports:
+      - "8224:8222"
+      - "4221:4222"
